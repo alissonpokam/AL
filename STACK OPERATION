@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+class stack{
+   private:
+   int top;
+   int stk[10];
+   public:
+     stack(){
+       top=-1;
+};
+void push(int a){
+     if(top==9){
+       cout<<"stack is over flow";
+       system("pause");
+       return;
+}
+top=top+1;
+stk[top]=a;
+    void display(){
+       if(top==-1){
+        cout<<"stack empty"<<endl;
+        system("pause");
+        return;
+}
+   for(int i = top; i>=0; i--)
+   cout<<stk[i]<<endl;
+   system("pause");
+   }
+};
+main(){
+stack s;
+int num,op;
+char choice;
+do{
+system("cls");
+cout<<"1-pushing stack"<<enndl;
+cout<<"2-popping stack"<<endl;
+cout<<"3-display stack"<<endl;
+cout<<"4-exite"<<endl;
+cin>>op;
+switch(op){
+case 1:
+   cout<<"enter value to insert:";
+   cin>>num;
+   s.push(num);
+break;
+case 2:
+   cout<<"enter value to remove:";
+   cin>>num;
+   s.pop(num);
+break;
+case 3:
+   cout<<"stack value"<<endl;
+   s.display();
+   break;
+}
+
+cout<<"do you want to continue or exite ?";
+cin>>choice;
+}while(choice=='y'||choice=='Y');
+
+}
+        
+
+int main(){
+
+
+
+  return 0;
+}
+   
